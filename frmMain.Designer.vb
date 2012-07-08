@@ -27,14 +27,14 @@ Partial Class frmMain
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeSaveDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GitHubWebpageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportBugsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lstSaves = New System.Windows.Forms.ListBox()
         Me.lstBackups = New System.Windows.Forms.ListBox()
         Me.btnBackup = New System.Windows.Forms.Button()
         Me.btnRestore = New System.Windows.Forms.Button()
         Me.MainStatusStrip = New System.Windows.Forms.StatusStrip()
         Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.GitHubWebpageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportBugsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MainStatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -67,6 +67,18 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'GitHubWebpageToolStripMenuItem
+        '
+        Me.GitHubWebpageToolStripMenuItem.Name = "GitHubWebpageToolStripMenuItem"
+        Me.GitHubWebpageToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.GitHubWebpageToolStripMenuItem.Text = "GitHub webpage..."
+        '
+        'ReportBugsToolStripMenuItem
+        '
+        Me.ReportBugsToolStripMenuItem.Name = "ReportBugsToolStripMenuItem"
+        Me.ReportBugsToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ReportBugsToolStripMenuItem.Text = "Report bugs..."
         '
         'lstSaves
         '
@@ -117,18 +129,6 @@ Partial Class frmMain
         '
         Me.StatusLabel.Name = "StatusLabel"
         Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
-        '
-        'GitHubWebpageToolStripMenuItem
-        '
-        Me.GitHubWebpageToolStripMenuItem.Name = "GitHubWebpageToolStripMenuItem"
-        Me.GitHubWebpageToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.GitHubWebpageToolStripMenuItem.Text = "GitHub webpage..."
-        '
-        'ReportBugsToolStripMenuItem
-        '
-        Me.ReportBugsToolStripMenuItem.Name = "ReportBugsToolStripMenuItem"
-        Me.ReportBugsToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.ReportBugsToolStripMenuItem.Text = "Report bugs..."
         '
         'frmMain
         '

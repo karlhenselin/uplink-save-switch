@@ -81,4 +81,8 @@ Public Class frmMain
     Private Sub ReportBugsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportBugsToolStripMenuItem.Click
         Process.Start("https://github.com/tmonk/uplink-save-switch/issues")
     End Sub
+
+    Private Sub ChangeSaveDirectoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeSaveDirectoryToolStripMenuItem.Click
+        frmSaveDirectory.Show()
+    End Sub
 End Class
