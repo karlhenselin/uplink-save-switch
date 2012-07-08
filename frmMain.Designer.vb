@@ -30,8 +30,10 @@ Partial Class frmMain
         Me.lstBackups = New System.Windows.Forms.ListBox()
         Me.btnBackup = New System.Windows.Forms.Button()
         Me.btnRestore = New System.Windows.Forms.Button()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.MainStatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
+        Me.MainStatusStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -80,6 +82,7 @@ Partial Class frmMain
         '
         'btnBackup
         '
+        Me.btnBackup.Enabled = False
         Me.btnBackup.Location = New System.Drawing.Point(12, 206)
         Me.btnBackup.Name = "btnBackup"
         Me.btnBackup.Size = New System.Drawing.Size(131, 23)
@@ -89,6 +92,7 @@ Partial Class frmMain
         '
         'btnRestore
         '
+        Me.btnRestore.Enabled = False
         Me.btnRestore.Location = New System.Drawing.Point(149, 206)
         Me.btnRestore.Name = "btnRestore"
         Me.btnRestore.Size = New System.Drawing.Size(131, 23)
@@ -96,20 +100,26 @@ Partial Class frmMain
         Me.btnRestore.Text = "Restore"
         Me.btnRestore.UseVisualStyleBackColor = True
         '
-        'StatusStrip1
+        'MainStatusStrip
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 240)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(293, 22)
-        Me.StatusStrip1.TabIndex = 5
-        Me.StatusStrip1.Text = "StatusStrip1"
+        Me.MainStatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusLabel})
+        Me.MainStatusStrip.Location = New System.Drawing.Point(0, 240)
+        Me.MainStatusStrip.Name = "MainStatusStrip"
+        Me.MainStatusStrip.Size = New System.Drawing.Size(293, 22)
+        Me.MainStatusStrip.TabIndex = 5
+        Me.MainStatusStrip.Text = "StatusStrip1"
+        '
+        'StatusLabel
+        '
+        Me.StatusLabel.Name = "StatusLabel"
+        Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(293, 262)
-        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.MainStatusStrip)
         Me.Controls.Add(Me.btnRestore)
         Me.Controls.Add(Me.btnBackup)
         Me.Controls.Add(Me.lstBackups)
@@ -120,6 +130,8 @@ Partial Class frmMain
         Me.Text = "Uplink Save Switch"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.MainStatusStrip.ResumeLayout(False)
+        Me.MainStatusStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -132,6 +144,7 @@ Partial Class frmMain
     Friend WithEvents lstBackups As System.Windows.Forms.ListBox
     Friend WithEvents btnBackup As System.Windows.Forms.Button
     Friend WithEvents btnRestore As System.Windows.Forms.Button
-    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents MainStatusStrip As System.Windows.Forms.StatusStrip
+    Friend WithEvents StatusLabel As System.Windows.Forms.ToolStripStatusLabel
 
 End Class
