@@ -2,10 +2,12 @@
 
 Public Class frmMain
     Dim backupPath As String = My.Application.Info.DirectoryPath & "\backups"
-    Dim savesPath As String = "C:\Program Files (x86)\Steam\steamapps\common\Uplink\users"
-    Dim DirInfoSaves As New DirectoryInfo(savesPath)
+    Dim savesPath As String = "C:/blankpathUSS"
     Dim DirInfoBackups As New DirectoryInfo(backupPath)
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.strSaveDirectory <> "" Then
+            savesPath = My.Settings.strSaveDirectory
+        End If
         If Not DirInfoBackups.Exists() Then
             DirInfoBackups.Create()
         End If
@@ -20,6 +22,10 @@ Public Class frmMain
     End Sub
 
     Sub refreshLists()
+        If My.Settings.strSaveDirectory <> "" Then
+            savesPath = My.Settings.strSaveDirectory
+        End If
+        Dim DirInfoSaves As New DirectoryInfo(savesPath)
         lstSaves.Items.Clear()
         lstBackups.Items.Clear()
 
