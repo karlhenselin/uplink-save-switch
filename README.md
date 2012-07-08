@@ -16,4 +16,5 @@ Inital creation
 
 0.11
 Complete rewrite due to lost source code, now managed by GitHub
+
 Added Steam option in save directory selection
