@@ -2,7 +2,7 @@
 
 Public Class frmMain
     Dim backupPath As String = My.Application.Info.DirectoryPath & "\backups"
-    Dim savesPath As String = "C:/blankpathUSS"
+    Dim savesPath As String = "C:/"
     Dim DirInfoBackups As New DirectoryInfo(backupPath)
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.strSaveDirectory <> "" Then
@@ -72,5 +72,13 @@ Public Class frmMain
             backupFile.Delete()
         End If
         Call refreshLists()
+    End Sub
+
+    Private Sub GitHubWebpageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GitHubWebpageToolStripMenuItem.Click
+        Process.Start("https://github.com/tmonk/uplink-save-switch")
+    End Sub
+
+    Private Sub ReportBugsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportBugsToolStripMenuItem.Click
+        Process.Start("https://github.com/tmonk/uplink-save-switch/issues")
     End Sub
 End Class

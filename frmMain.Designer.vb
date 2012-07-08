@@ -33,6 +33,8 @@ Partial Class frmMain
         Me.btnRestore = New System.Windows.Forms.Button()
         Me.MainStatusStrip = New System.Windows.Forms.StatusStrip()
         Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.GitHubWebpageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportBugsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.MainStatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -61,6 +63,7 @@ Partial Class frmMain
         '
         'AboutToolStripMenuItem
         '
+        Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GitHubWebpageToolStripMenuItem, Me.ReportBugsToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.AboutToolStripMenuItem.Text = "About"
@@ -115,6 +118,18 @@ Partial Class frmMain
         Me.StatusLabel.Name = "StatusLabel"
         Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
         '
+        'GitHubWebpageToolStripMenuItem
+        '
+        Me.GitHubWebpageToolStripMenuItem.Name = "GitHubWebpageToolStripMenuItem"
+        Me.GitHubWebpageToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.GitHubWebpageToolStripMenuItem.Text = "GitHub webpage..."
+        '
+        'ReportBugsToolStripMenuItem
+        '
+        Me.ReportBugsToolStripMenuItem.Name = "ReportBugsToolStripMenuItem"
+        Me.ReportBugsToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.ReportBugsToolStripMenuItem.Text = "Report bugs..."
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,5 +164,7 @@ Partial Class frmMain
     Friend WithEvents btnRestore As System.Windows.Forms.Button
     Friend WithEvents MainStatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents StatusLabel As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents GitHubWebpageToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ReportBugsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
