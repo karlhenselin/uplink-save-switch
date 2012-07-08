@@ -26,7 +26,7 @@ Partial Class frmMain
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeSaveDirectoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lstUsers = New System.Windows.Forms.ListBox()
+        Me.lstSaves = New System.Windows.Forms.ListBox()
         Me.lstBackups = New System.Windows.Forms.ListBox()
         Me.btnBackup = New System.Windows.Forms.Button()
         Me.btnRestore = New System.Windows.Forms.Button()
@@ -62,13 +62,13 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'lstUsers
+        'lstSaves
         '
-        Me.lstUsers.FormattingEnabled = True
-        Me.lstUsers.Location = New System.Drawing.Point(12, 27)
-        Me.lstUsers.Name = "lstUsers"
-        Me.lstUsers.Size = New System.Drawing.Size(131, 173)
-        Me.lstUsers.TabIndex = 1
+        Me.lstSaves.FormattingEnabled = True
+        Me.lstSaves.Location = New System.Drawing.Point(12, 27)
+        Me.lstSaves.Name = "lstSaves"
+        Me.lstSaves.Size = New System.Drawing.Size(131, 173)
+        Me.lstSaves.TabIndex = 1
         '
         'lstBackups
         '
@@ -113,7 +113,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnRestore)
         Me.Controls.Add(Me.btnBackup)
         Me.Controls.Add(Me.lstBackups)
-        Me.Controls.Add(Me.lstUsers)
+        Me.Controls.Add(Me.lstSaves)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -128,7 +128,7 @@ Partial Class frmMain
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangeSaveDirectoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents lstUsers As System.Windows.Forms.ListBox
+    Friend WithEvents lstSaves As System.Windows.Forms.ListBox
     Friend WithEvents lstBackups As System.Windows.Forms.ListBox
     Friend WithEvents btnBackup As System.Windows.Forms.Button
     Friend WithEvents btnRestore As System.Windows.Forms.Button
