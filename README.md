@@ -11,6 +11,9 @@ Should run on XP/Vista/7 x86/x64
 
 Changelog
 =========
+2.1
+* Fixed 'choose save directory...' button
+
 2
 * Complete rewrite due to lost source code, now managed by GitHub
 * Added Steam option in save directory selection
