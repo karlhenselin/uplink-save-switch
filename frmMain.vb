@@ -2,7 +2,7 @@
 
 Public Class frmMain
     Dim backupPath As String = My.Application.Info.DirectoryPath & "\backups"
-    Dim savesPath As String = "C:/"
+    Dim savesPath As String = "C:\"
     Dim DirInfoBackups As New DirectoryInfo(backupPath)
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.strSaveDirectory <> "" Then

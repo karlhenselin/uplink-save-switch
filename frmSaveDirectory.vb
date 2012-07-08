@@ -71,7 +71,7 @@ Public Class frmSaveDirectory
         Dim FolderBrowserDialog As New FolderBrowserDialog
         With FolderBrowserDialog
             .RootFolder = Environment.SpecialFolder.Desktop
-            .SelectedPath = "c:\"
+            .SelectedPath = "C:\"
             .Description = "Select the save directory"
             If .ShowDialog = DialogResult.OK Then
                 txtDirectory.Text = .SelectedPath
