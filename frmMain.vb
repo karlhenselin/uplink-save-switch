@@ -15,9 +15,10 @@ Public Class frmMain
     End Sub
 
     Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
-        Dim saveFile As FileInfo = New FileInfo(savesPath & "\" & lstSaves.SelectedItem & ".usr")
-        saveFile.CopyTo(backupPath & "\" & lstSaves.SelectedItem.ToString.Replace(".usr", "") & "  " & DateTime.Now.ToString("d-M-yyyy HH-mm-ss") & ".bak")
-
+        if(lstSaves.SelectedItem){
+            Dim saveFile As FileInfo = New FileInfo(savesPath & "\" & lstSaves.SelectedItem & ".usr")
+            saveFile.CopyTo(backupPath & "\" & lstSaves.SelectedItem.ToString.Replace(".usr", "") & "  " & DateTime.Now.ToString("d-M-yyyy HH-mm-ss") & ".bak")
+        }
         Call refreshLists()
     End Sub
 
