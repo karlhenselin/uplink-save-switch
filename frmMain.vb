@@ -15,11 +15,12 @@ Public Class frmMain
     End Sub
 
     Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
-        if(lstSaves.SelectedItem){
+        if lstSaves.SelectedItem Then
             Dim saveFile As FileInfo = New FileInfo(savesPath & "\" & lstSaves.SelectedItem & ".usr")
             saveFile.CopyTo(backupPath & "\" & lstSaves.SelectedItem.ToString.Replace(".usr", "") & "  " & DateTime.Now.ToString("d-M-yyyy HH-mm-ss") & ".bak")
-        }
-        Call refreshLists()
+        
+        Call refreshLists()//an else with a nice error message would be great.
+        End If
     End Sub
 
     Sub refreshLists()
@@ -62,17 +63,19 @@ Public Class frmMain
     End Sub
 
     Private Sub btnRestore_Click(sender As Object, e As EventArgs) Handles btnRestore.Click
-        Dim newFileName = lstBackups.SelectedItem.ToString.Split("  ")(0) & ".usr"
-        Dim originalFile As FileInfo = New FileInfo(savesPath & "\" & newFileName)
-        If originalFile.Exists Then
-            originalFile.CopyTo(savesPath & "\" & newFileName & ".bak")
-            originalFile.Delete()
-            Dim saveFile As FileInfo = New FileInfo(backupPath & "\" & lstBackups.SelectedItem & ".bak")
-            saveFile.CopyTo(savesPath & "\" & newFileName)
-            Dim backupFile As FileInfo = New FileInfo(savesPath & "\" & newFileName & ".bak")
-            backupFile.Delete()
+        If lstBackups.SelectedItem Then
+            Dim newFileName = lstBackups.SelectedItem.ToString.Split("  ")(0) & ".usr"
+            Dim originalFile As FileInfo = New FileInfo(savesPath & "\" & newFileName)
+            If originalFile.Exists Then
+                originalFile.CopyTo(savesPath & "\" & newFileName & ".bak")
+                originalFile.Delete()
+                Dim saveFile As FileInfo = New FileInfo(backupPath & "\" & lstBackups.SelectedItem & ".bak")
+                saveFile.CopyTo(savesPath & "\" & newFileName)
+                Dim backupFile As FileInfo = New FileInfo(savesPath & "\" & newFileName & ".bak")
+                backupFile.Delete()
+            End If
+            Call refreshLists()
         End If
-        Call refreshLists()
     End Sub
 
     Private Sub GitHubWebpageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GitHubWebpageToolStripMenuItem.Click
